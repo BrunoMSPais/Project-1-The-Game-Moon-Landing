@@ -7,7 +7,190 @@
     <link rel="stylesheet" href="/style/style.css">
 </head>
 <body>
-    <canvas id="canvas", width="1000", height="1000"></canvas>
+    <header>
+        <h1>Moon Landing</h1>
+    </header>
+
+    <div class="wrapper">
+        <div class="controols">
+            <div id="options">
+                <h2>OPTIONS</h2>
+                <ul>
+                    <li>
+                        <form>
+                            <label for="sound-fx">Sound efects</label>
+                            <input type="checkbox" name="sound-fx" id="sound-fx">
+                        </form>
+                    </li>
+                    <li>
+                        <form>
+                            <label for="sound-track">Music</label>
+                            <input type="checkbox" name="sound-track" id="sound-track">
+                        </form>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="instructions">
+                <h2>GAME INSTRUCTIONS</h2>
+                <ul>
+                    <li>Up - Main Thruster</li>
+                    <li>Right - Left Thruster</li>
+                    <li>Left - Right Thruster</li>
+                    <li>Space Bar - Skip Intro</li>
+                    <li>Enter - Game Start</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="game-area">
+            <div class="canvas">
+                <canvas id="canvas", width="1000", height="1000"></canvas>
+            </div>
+            <div class="stats">
+                <!-- bonus -->
+                <!-- <div id="meeter">
+                    <h3>FUEL</h3>
+                    <form>
+                        <input type="range" name="fuel-gauge" id="fuel-gauge">
+                    </form>
+                </div> -->
+
+                <div id="altitude">
+                    <h3>
+                        ALTITUDE:
+                    </h3>
+                    <form>
+                        <input type="number" name="altitude" id="altitude">
+                        <span>Meeters</span>
+                    </form>
+                </div>
+
+                <div id="distance">
+                    <h3>
+                        DISTANCE TO TARGET
+                    </h3>
+                    <form>
+                        <input type="number" name="distance" id="distance">
+                        <span>Meeters</span>
+                    </form>
+                </div>                
+            </div>
+        </div>
+
+        <div class="score">
+            <h2>SCORE BOARD</h2>
+
+            <div id="high-scores">
+                <h3>Ranking</h3>
+                <ol>
+                    <li>
+                        <form>
+                            <label for="first">1st</label>
+                            <span>Apollimy</span>
+                            <input type="time" name="first" id="first" placeholder="0'17.05">
+                        </form>
+                    </li>
+                    <li>
+                        <form>
+                            <label for="second">2nd</label>
+                            <span>Wild</span>
+                            <input type="time" name="second" id="second" placeholder="0'39.07">
+                        </form>
+                    </li>
+                    <li>
+                        <form>
+                            <label for="third">3rd</label>
+                            <span>SAMurai</span>
+                            <input type="time" name="third" id="" placeholder="0'45.10">
+                        </form>
+                    </li>
+                    <li>
+                        <form>
+                            <label for="fuorth">4th</label>
+                            <span>Ratita</span>
+                            <input type="time" name="fuorth" id="fuorth" placeholder="1'11.04">
+                        </form>
+                    </li>
+                    <li>
+                        <form>
+                            <label for="fifth"> 5th</label>
+                            <span>Buzz</span>
+                            <input type="time" name="fifth" id="fifth" placeholder="1'19.69">
+                        </form>
+                    </li>
+                </ol>
+            </div>
+
+            <div id="player">
+                <h3>
+                    Player:
+                </h3>
+                <form>
+                    <label for="player-name">Name</label>
+                    <input type="text" name="player-name" id="player-name">
+                    <!-- BONUS -->
+                    <br>
+                    <label for="player-lives">Lives:</label>
+                    <input type="radio">
+                    <input type="radio">
+                    <input type="radio">
+                </form>
+
+                <h3>
+                    Score:
+                </h3>
+                <form>
+                    <label for="player-time">Time</label>
+                    <input type="time">
+                </form>
+                <!-- BONUS -->
+                <!-- <form>
+                    <label for="best-time">Best Time</label>
+                    <input type="time" name="best-time" id="best-time">
+                </form> -->
+                <form>
+                    <label for="bonus">Time-Bonus</label>
+                    <input type="time" name="bonus" id="bonus">
+                </form>
+                <form>
+                    <label for="final-score">Time Total:</label>
+                    <input type="time" name="final-score" id="final-score">
+                </form>
+            </div>
+        </div>
+    </div>
+
+
     <script src="/script/main.js"></script>
 </body>
 </html>
+<!-- 
+background image:
+https://www.google.pt/url?sa=i&url=https%3A%2F%2Fwww.startmag.it%2Fmondo%2Fla-luna-di-oriana-fallaci%2F&psig=AOvVaw1pgEiZ9LfffHxYubitaz48&ust=1584280526911000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCPisyYmPmugCFQAAAAAdAAAAABAP
+
+background soundtrack:
+https://soundcloud.com/mcrilf/shine-on-you-crazy-diamond
+
+
+
+INTRO TEXT:
+
+Apolo 11: - "Huston we have a problem!"
+Huston: - "This is Huston ground control. Go ahead Apolo 11."
+Apolo 11: - "We seem to have missed our target..."
+Apolo 11: - "We are not over the sea of tranquility!"
+Huston: - "Stand by for telemetrie comfirmation..."
+Huston: - "Target overshot confirmed! Do you see a suitable landing area?"
+Apolo 11: - "The seams to be a suitable are not far..."
+Huston: - "Roger that. You may procede. We will be listening."
+
+
+GAME OVER TEXT:
+
+Huston: - "Apolo 11, this is Huston ground control. Do you copy?!"
+Huston: - "Apolo 11 come in!!!"
+Huston: - "Apolo 11 ????"
+Huston: - "Uhhh... We seam to have lost Apolo 11!"
+Huston: - "My God have mercy on they'r souls!"
+GAME OVER! -->
