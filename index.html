@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project 1 - Moon Module Landing</title>
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/style/style.css">
 </head>
 <body>
@@ -45,7 +46,7 @@
 
         <div class="game-area">
             <div class="canvas">
-                <canvas id="canvas", width="1000", height="1000"></canvas>
+                <canvas id="canvas", width="1475", height="920"></canvas>
             </div>
             <div class="stats">
                 <!-- bonus -->
@@ -60,20 +61,16 @@
                     <h3>
                         ALTITUDE:
                     </h3>
-                    <form>
-                        <input type="number" name="altitude" id="altitude">
-                        <span>Meeters</span>
-                    </form>
+                    <span class="input-data">0</span>
+                    <span>Meeters</span>
                 </div>
 
                 <div id="distance">
                     <h3>
-                        DISTANCE TO TARGET
+                        DISTANCE TO TARGET:
                     </h3>
-                    <form>
-                        <input type="number" name="distance" id="distance">
-                        <span>Meeters</span>
-                    </form>
+                    <span>Meeters</span>
+                    <span class="input-data">0</span>
                 </div>                
             </div>
         </div>
@@ -82,81 +79,61 @@
             <h2>SCORE BOARD</h2>
 
             <div id="high-scores">
-                <h3>Ranking</h3>
+                <h3 class="board">Ranking</h3>
                 <ol>
                     <li>
-                        <form>
-                            <label for="first">1st</label>
-                            <span>Apollimy</span>
-                            <input type="time" name="first" id="first" placeholder="0'17.05">
-                        </form>
+                        <span class="place">1st</span>
+                        <span class="input-data player-name">Apollimy</span>
+                        <span class="input-data player-time">0:17.05</span>
                     </li>
                     <li>
-                        <form>
-                            <label for="second">2nd</label>
-                            <span>Wild</span>
-                            <input type="time" name="second" id="second" placeholder="0'39.07">
-                        </form>
+                        <span class="place">2nd</span>
+                        <span class="input-data player-name">Wild</span>
+                        <span class="input-data player-time">0:39.07</span>
                     </li>
                     <li>
-                        <form>
-                            <label for="third">3rd</label>
-                            <span>SAMurai</span>
-                            <input type="time" name="third" id="" placeholder="0'45.10">
-                        </form>
+                        <span class="place">3rd</span>
+                        <span class="input-data player-name">SAMurai</span>
+                        <span class="input-data player-time">0:45.10</span>
                     </li>
                     <li>
-                        <form>
-                            <label for="fuorth">4th</label>
-                            <span>Ratita</span>
-                            <input type="time" name="fuorth" id="fuorth" placeholder="1'11.04">
-                        </form>
+                        <span class="place">4th</span>
+                        <span class="input-data player-name">Milika</span>
+                        <span class="input-data player-time">1:11.04</span>
                     </li>
                     <li>
-                        <form>
-                            <label for="fifth"> 5th</label>
-                            <span>Buzz</span>
-                            <input type="time" name="fifth" id="fifth" placeholder="1'19.69">
-                        </form>
+                        <span class="place">5th</span>
+                        <span class="input-data player-name">Buzz</span>
+                        <span class="input-data player-time">1:19.69</span>
                     </li>
                 </ol>
             </div>
 
             <div id="player">
-                <h3>
+                <h3 class="board">
                     Player:
                 </h3>
                 <form>
-                    <label for="player-name">Name</label>
-                    <input type="text" name="player-name" id="player-name">
+                    <label for="player-name">Name:</label>
+                    <span class="input-data">Player 1</span>
                     <!-- BONUS -->
-                    <br>
+                    <!-- <br>
                     <label for="player-lives">Lives:</label>
                     <input type="radio">
                     <input type="radio">
-                    <input type="radio">
+                    <input type="radio"> -->
                 </form>
 
-                <h3>
+                <h3 class="board">
                     Score:
                 </h3>
-                <form>
-                    <label for="player-time">Time</label>
-                    <input type="time">
-                </form>
+                <ul>
+                    <li >Time <span class="current">0:00.00</span></li>
+                    <li >Time Bonus <span class="current">- 0:00.00</span></li>
+                    <li >Time Total <span class="current">0:00.00</span></li>
+                </ul>
                 <!-- BONUS -->
-                <!-- <form>
-                    <label for="best-time">Best Time</label>
-                    <input type="time" name="best-time" id="best-time">
-                </form> -->
-                <form>
-                    <label for="bonus">Time-Bonus</label>
-                    <input type="time" name="bonus" id="bonus">
-                </form>
-                <form>
-                    <label for="final-score">Time Total:</label>
-                    <input type="time" name="final-score" id="final-score">
-                </form>
+                <!-- <li>Best Time<span>0:00.00</span></li> -->
             </div>
         </div>
     </div>
