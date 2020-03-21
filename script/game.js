@@ -1,3 +1,12 @@
+canvas = document.querySelector('canvas');
+const game = new Game(canvas);
+
+window.addEventListener('keypress',event => {
+    if(event.keyCode === 13) {
+        game.start();
+    }
+});
+
 class Game {
     constructor(canvas) {
         this.canvas = document.querySelector('canvas');
@@ -8,7 +17,7 @@ class Game {
         this.player = new Player(this);
         this.player.setControls;
 
-        this.landing-area = new Lnanding-area(this);
+        // this.landing-area = new Lnanding-area(this);
 
         this.animationId;
         this.frame = 0;

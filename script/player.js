@@ -43,16 +43,16 @@ class Player {
           });
         }
     }
-    left() {
-        return this.x + (this.width /2);
-    }
-    right() {
-        return this.x + (this.width / 2);
-    }
-    top() {
-        return this.y;
-    }
-    bottom() {
-        return this.y + this.height;
-    }
+    // left() {
+    //     return this.x + (this.width /2);
+    // }
+    // right() {
+    //     return this.x + (this.width / 2);
+    // }
+    // top() {
+    //     return this.y;
+    // }
+    // bottom() {
+    //     return this.y + this.height;
+    // }
 }
