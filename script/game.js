@@ -1,19 +1,28 @@
+let ctx = this.context;
+
 class Game {
     constructor(canvas) {
         this.canvas = document.querySelector('canvas');
         this.context = canvas.getContext('2d');
         this.width = canvas.width;
         this.height = canvas.height;
+
         this.landingarea = new Landingarea(this);
-        this.player = new Player(this);
-        this.player.setControls;
-        this.animationId;
-        this.frame = 0;
-        this.gameStatus = "game";
+        
         this.target = new Target(this);
+
+        this.sound;
+
+        this.player = new Player(this);
+        this.setControls;
+        // this.animationId;
+        // this.frame = 0;
+        // this.gameStatus = "game";
+        this.end = false;
     }
     draw(timestamp) {
-        this.context.clearRect(0, 0, this.width, this.height);
+        this.clearAll();
+        // this.context.clearRect(0, 0, this.width, this.height);
         this.update(timestamp)
         //DRAW THE LANDING AREA
         this.landingarea.draw();
@@ -21,28 +30,32 @@ class Game {
         this.target.draw();
         //SHOW PLAYER
         this.player.draw();
-        // const animation =
-        //     window.requestAnimationFrame(timestamp =>
-        //         this.draw(timestamp));
-        // if (this.end) {
-        //     window.cancelAnimationFrame(animation);
-        // }
+        this.update(timestamp);
+        const animation = window.requestAnimationFrame(timestamp => this.draw(timestamp));
     }
-    update() {
+
+    update(timestamp) {
         this.player.update();
     }
+
     animation(timestamp) {
         this.draw();
         this.update(timestamp);
     }
+
     start() {
-        // if (this.gameStatus === "game") {
-        //     this.animation();
-        // }
         console.log('game started');
-        // this.animation();
-        this.draw();
-        this.reset();
+        this.animation();
+        // this.draw();
+        // this.reset();
+    }
+
+    clearAll() {
+        this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
+    }
+    
+    endGame() {
+        this.end = true;
     }
 }
 
