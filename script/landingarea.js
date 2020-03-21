@@ -1,16 +1,18 @@
-class Target {
+class Landingarea {
     constructor(game, image, x, y, width, height) {
         this.game = game;
         this.context = game.context;
         this.canvas = document.querySelector('canvas');
 
         this.image = new Image();
-        this.image.src = "pics/target/landing-target.png";
+        this.image.src = "pics/ground-layouts/ground-layout-01.png"
 
-        this.x = 920;
-        this.y = 920-54;
-        this.width = 230;
-        this.height = 40;
+        this.x = 0;
+        this.y = 520;
+        this.width = 1475;
+        this.height = 400;
+
+
     }
 
     draw() {
