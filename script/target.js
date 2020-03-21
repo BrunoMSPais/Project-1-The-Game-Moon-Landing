@@ -7,10 +7,10 @@ class Target {
         this.image = new Image();
         this.image.src = "pics/target/landing-target.png";
 
-        this.x = 920;
-        this.y = 920-54;
+        this.x = 825;
+        this.y = 825;
         this.width = 230;
-        this.height = 40;
+        this.height = 80;
     }
 
     draw() {

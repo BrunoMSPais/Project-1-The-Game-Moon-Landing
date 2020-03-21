@@ -4,36 +4,17 @@ class Game {
         this.context = canvas.getContext('2d');
         this.width = canvas.width;
         this.height = canvas.height;
-
+        this.landingarea = new Landingarea(this);
         this.player = new Player(this);
         this.player.setControls;
-
-        this.landingarea = new Landingarea(this);
-
         this.animationId;
         this.frame = 0;
         this.gameStatus = "game";
-
         this.target = new Target(this);
     }
-
-    start() {
-        // if (this.gameStatus === "game") {
-        //     this.animation();
-        // }
-        console.log('game started');
-        this.draw();
-
-        // this.reset();
-        // this.animation();
-    }
-
-    update() {
-        this.player.update();
-    }
-
-    draw() {
+    draw(timestamp) {
         this.context.clearRect(0, 0, this.width, this.height);
+        this.update(timestamp)
         //DRAW THE LANDING AREA
         this.landingarea.draw();
         //DRAW TARGET LANDING AREA
@@ -41,17 +22,27 @@ class Game {
         //SHOW PLAYER
         this.player.draw();
         // const animation =
-        // window.requestAnimationFrame(timestamp =>
-        //     this.draw(timestamp));
-        //     if (this.end) {
-        //         window.cancelAnimationFrame(animation);
-        //     }
+        //     window.requestAnimationFrame(timestamp =>
+        //         this.draw(timestamp));
+        // if (this.end) {
+        //     window.cancelAnimationFrame(animation);
+        // }
     }
-
+    update() {
+        this.player.update();
+    }
     animation(timestamp) {
         this.draw();
         this.update(timestamp);
-
+    }
+    start() {
+        // if (this.gameStatus === "game") {
+        //     this.animation();
+        // }
+        console.log('game started');
+        // this.animation();
+        this.draw();
+        this.reset();
     }
 }
 
