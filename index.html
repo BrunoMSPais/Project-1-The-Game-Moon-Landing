@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project 1 - Moon Module Landing</title>
+
+    <script src="https://kit.fontawesome.com/f9d9630c8c.js" crossorigin="anonymous"></script>
+
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style/style.css">
 </head>
@@ -20,13 +23,13 @@
                     <li>
                         <form>
                             <label for="sound-fx">Sound efects</label>
-                            <input type="checkbox" name="sound-fx" id="sound-fx">
+                            <input type="checkbox" name="sound-fx" id="sound-fx" checked>
                         </form>
                     </li>
                     <li>
                         <form>
                             <label for="sound-track">Music</label>
-                            <input type="checkbox" name="sound-track" id="sound-track">
+                            <input type="checkbox" name="sound-track" id="sound-track" checked>
                         </form>
                     </li>
                 </ul>
@@ -35,9 +38,9 @@
             <div id="instructions">
                 <h2>GAME INSTRUCTIONS</h2>
                 <ul>
-                    <li>Up - Main Thruster</li>
-                    <li>Right - Left Thruster</li>
-                    <li>Left - Right Thruster</li>
+                    <li><i class="far fa-caret-square-up"></i> - Main Thruster</li>
+                    <li><i class="far fa-caret-square-right"></i> - Left Thruster</li>
+                    <li><i class="far fa-caret-square-left"></i> - Right Thruster</li>
                     <li>Space Bar - Skip Intro</li>
                     <li>Enter - Game Start</li>
                 </ul>
@@ -156,6 +159,7 @@
 
 
     <script src="script/player.js"></script>
+    <script src="script/controls.js"></script>
     <script src="script/target.js"></script>
     <script src="script/landingarea.js"></script>
     <script src="script/game.js"></script>

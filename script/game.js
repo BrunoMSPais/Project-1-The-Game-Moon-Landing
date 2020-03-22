@@ -11,13 +11,18 @@ class Game {
         
         this.target = new Target(this);
 
-        this.sound;
+        // this.sound;
 
         this.player = new Player(this);
-        this.setControls;
-        // this.animationId;
-        // this.frame = 0;
-        // this.gameStatus = "game";
+        this.controls = new Controls(this); /* code breaks --> console: "controls.js:4 Uncaught TypeError: Cannot read property 'player' of undefined
+        at new Controls (controls.js:4)
+        at new Game (game.js:17)
+        at index.js:2
+    Controls	@	controls.js:4
+    Game	@	game.js:17
+    (anonymous)	@	index.js:2" */
+        this.controls.setControls();
+
         this.end = false;
     }
     draw(timestamp) {
@@ -36,6 +41,11 @@ class Game {
 
     update(timestamp) {
         this.player.update();
+        
+        //detect borders:
+        if(this.player.x <= 0 || this.player.x >= 1350 || this.player.y >= 870 || this.player.y <= 50) {
+            this.end = true;
+        }
     }
 
     animation(timestamp) {

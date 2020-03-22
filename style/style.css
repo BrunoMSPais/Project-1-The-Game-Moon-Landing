@@ -15,6 +15,15 @@ h3 {
     text-align: center;
 }
 
+i {
+    font-size: 35px;
+}
+
+input {
+    width: 25px;
+    height: 25px;
+}
+
 ul,
 ol {
     list-style: none;

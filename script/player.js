@@ -24,10 +24,6 @@ class Player {
       }
 
       update() {
-        //stop moving:
-        if(this.y >= 920) {
-            this.velocityY = 0;
-        }
         this.y += this.velocityY;
         this.y += this.gravity;
         this.velocityY += this.gravity;
@@ -35,5 +31,12 @@ class Player {
         this.x += this.velocityX;
         console.log('X: ', this.X);
         
+
+        //stop moving:
+        if(this.y > 870) {
+            this.y = 870;
+            this.velocityY = 0; // the player stops at the edge of the canvas but the console still keeps going on regestring ocorrences ?????
+            this.game.endGame(); // breaks the code :P (solution for the line above)
+        }
       }
   }
