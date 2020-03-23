@@ -3,6 +3,8 @@ html {
 }
 
 body {
+    height: 100vh;
+    width: 100vw;
     background-image: url('https://www.startmag.it/wp-content/uploads/Luna-706x400.jpg');
     background-size: 100%;
     background-repeat: no-repeat;
@@ -114,5 +116,5 @@ header {
 }
 
 canvas {
-    background: url('/pics/background/F9ppMbS.png')
+    background: url('../pics/background/F9ppMbS.png')
 }
