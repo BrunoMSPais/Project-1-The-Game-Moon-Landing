@@ -1,9 +1,9 @@
 class Player {
     constructor(game) {
-        // this.game = game;
         this.height = game.height;
         this.width = game.width;
         this.context = game.context;
+
         this.x = 737;
         this.y = 50;
         this.playerWidth = 100;
@@ -13,7 +13,7 @@ class Player {
 
         this.gravity = 0.02; //gravity acceleration
 
-        this.score = 0; //sore counter
+        this.score = 0; //score counter
         
         this.image = new Image();
         this.image.src = 'pics/apolo-11/apollo-11.png';
@@ -30,6 +30,8 @@ class Player {
         console.log('Y: ', this.y);
         this.x += this.velocityX;
         console.log('X: ', this.X);
+        console.log('Y velocity:', this.velocityY);
+        console.log('X velocity:', this.velocityX);
         
 
         //stop moving:

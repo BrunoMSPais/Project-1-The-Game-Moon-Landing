@@ -1,4 +1,4 @@
-let ctx = this.context;
+// let ctx = this.context;
 
 class Game {
     constructor(canvas) {
@@ -14,13 +14,7 @@ class Game {
         // this.sound;
 
         this.player = new Player(this);
-        this.controls = new Controls(this); /* code breaks --> console: "controls.js:4 Uncaught TypeError: Cannot read property 'player' of undefined
-        at new Controls (controls.js:4)
-        at new Game (game.js:17)
-        at index.js:2
-    Controls	@	controls.js:4
-    Game	@	game.js:17
-    (anonymous)	@	index.js:2" */
+        this.controls = new Controls(this);
         this.controls.setControls();
 
         this.end = false;
