@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 1 - Moon Module Landing</title>
+
+    <script src="https://kit.fontawesome.com/f9d9630c8c.js" crossorigin="anonymous"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <header>
+        <h1>Moon Landing</h1>
+    </header>
+
+    <div class="wrapper">
+        <div class="controols">
+            <div id="options">
+                <h2>OPTIONS</h2>
+                <ul>
+                    <li>
+                        <form>
+                            <label for="sound-fx">Sound efects</label>
+                            <input type="checkbox" name="sound-fx" id="sound-fx" checked>
+                        </form>
+                    </li>
+                    <li>
+                        <form>
+                            <label for="sound-track">Music</label>
+                            <input type="checkbox" name="sound-track" id="sound-track" checked>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="instructions">
+                <h2>GAME INSTRUCTIONS</h2>
+                <ul>
+                    <li><i class="far fa-caret-square-up"></i> - Main Thruster</li>
+                    <li><i class="far fa-caret-square-right"></i> - Left Thruster</li>
+                    <li><i class="far fa-caret-square-left"></i> - Right Thruster</li>
+                    <li>Space Bar - Skip Intro</li>
+                    <li>Enter - Game Start</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="game-area">
+            <div class="canvas">
+                <canvas id="canvas" width="1475" height="920"></canvas>
+            </div>
+            <div class="stats">
+                <!-- bonus -->
+                <!-- <div id="meeter">
+                    <h3>FUEL</h3>
+                    <form>
+                        <input type="range" name="fuel-gauge" id="fuel-gauge">
+                    </form>
+                </div> -->
+
+                <div>
+                    <h3>
+                        HORIZONTAL SPEED:
+                    </h3>
+                    <span class="input-data" id="xSpeed">0</span>
+                    <span>km/h</span>
+                </div>
+
+                <div>
+                    <h3>
+                        VERTICAL SPEED:
+                    </h3>
+                    <span class="input-data" id="ySpeed">0</span>
+                    <span>km/h</span>
+                </div>
+
+                <div id="altitude">
+                    <h3>
+                        ALTITUDE:
+                    </h3>
+                    <span class="input-data">0</span>
+                    <span>Meeters</span>
+                </div>
+
+                <div id="distance">
+                    <h3>
+                        DISTANCE TO TARGET:
+                    </h3>
+                    <span>Meeters</span>
+                    <span class="input-data">0</span>
+                </div>                
+            </div>
+        </div>
+
+        <div class="score">
+            <h2>SCORE BOARD</h2>
+
+            <div id="high-scores">
+                <h3 class="board">Ranking</h3>
+                <ol>
+                    <li>
+                        1st
+                        <span class="input-data player-name" id="one">Apollimy</span>
+                        <span class="input-data player-time" id="one-score">0:17.05</span>
+                    </li>
+                    <li>
+                        2nd
+                        <span class="input-data player-name" id="two">Wild</span>
+                        <span class="input-data player-time" id="two-score">0:39.07</span>
+                    </li>
+                    <li>
+                        3rd
+                        <span class="input-data player-name" id="thre">SAMurai</span>
+                        <span class="input-data player-time" id="thre-score">0:45.10</span>
+                    </li>
+                    <li>
+                        4th
+                        <span class="input-data player-name" id="fuor">Milika</span>
+                        <span class="input-data player-time" id="fuor-score">1:11.04</span>
+                    </li>
+                    <li>
+                        5th
+                        <span class="input-data player-name" id="five">Buzz</span>
+                        <span class="input-data player-time" id="five-score">1:19.69</span>
+                    </li>
+                </ol>
+            </div>
+
+            <div id="player">
+                <h3 class="board">
+                    Player:
+                </h3>
+                <form>
+                    <label for="player-name">Name:</label>
+                    <span class="input-data">Player 1</span>
+                    <!-- BONUS -->
+                    <!-- <br>
+                    <label for="player-lives">Lives:</label>
+                    <input type="radio">
+                    <input type="radio">
+                    <input type="radio"> -->
+                </form>
+
+                <h3 class="board">
+                    Score:
+                </h3>
+                <ul>
+                    <li >Time <span class="current">0:00.00</span></li>
+                    <li >Time Bonus <span class="current">- 0:00.00</span></li>
+                    <li >Time Total <span class="current">0:00.00</span></li>
+                </ul>
+                <!-- BONUS -->
+                <!-- <li>Best Time<span>0:00.00</span></li> -->
+            </div>
+        </div>
+    </div>
+
+
+    <script src="script/player.js"></script>
+    <script src="script/target.js"></script>
+    <script src="script/landingarea.js"></script>
+     <script src="script/controls.js"></script>
+    <script src="script/game.js"></script>
+    <script src="script/index.js"></script>
+</body>
+</html>
+<!-- 
+background image:
+https://www.google.pt/url?sa=i&url=https%3A%2F%2Fwww.startmag.it%2Fmondo%2Fla-luna-di-oriana-fallaci%2F&psig=AOvVaw1pgEiZ9LfffHxYubitaz48&ust=1584280526911000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCPisyYmPmugCFQAAAAAdAAAAABAP
+
+background soundtrack:
+https://soundcloud.com/mcrilf/shine-on-you-crazy-diamond
+
+
+
+INTRO TEXT:
+
+
+Huston: - "This is Huston ground control. Go ahead Apolo 11."
+Apolo 11: - "We seem to have missed our target..."
+Apolo 11: - "We are not over the sea of tranquility!"
+Huston: - "Stand by for telemetrie comfirmation..."
+Huston: - "Target overshot confirmed! Do you see a suitable landing area?"
+Apolo 11: - "The seams to be a suitable are not far..."
+Huston: - "Roger that. You may procede. We will be listening."
+
+
+GAME OVER TEXT:
+
+Huston: - "Apolo 11, this is Huston ground control. Do you copy?!"
+Huston: - "Apolo 11 come in!!!"
+Huston: - "Apolo 11 ????"
+Huston: - "Uhhh... We seam to have lost Apolo 11!"
+Huston: - "My God have mercy on they'r souls!"
+GAME OVER! -->

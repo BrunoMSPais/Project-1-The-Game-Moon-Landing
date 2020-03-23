@@ -1,0 +1,118 @@
+html {
+    font-family: 'Press Start 2P', cursive;
+}
+
+body {
+    background-image: url('https://www.startmag.it/wp-content/uploads/Luna-706x400.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+    color: #00ccff;
+}
+h1,
+h2,
+h3 {
+    text-align: center;
+}
+
+i {
+    font-size: 35px;
+}
+
+input {
+    width: 25px;
+    height: 25px;
+}
+
+ul,
+ol {
+    list-style: none;
+    margin-left: 0;
+}
+
+li {
+    margin-left: -40px;
+    margin-top: 15px;
+}
+
+form, .stats {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+span {
+    width: 150px;
+    border: 0px 15px 0px 15px;
+}
+
+header,
+.controols,
+.game-area,
+.score {
+    border: 2px solid #00ccff;
+    margin: 5px;
+    padding: 10px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.controols,
+.game-area,
+.score {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#instructions li {
+    text-align: justify;
+}
+
+.game-area {
+    padding: 0;
+}
+
+.game-area > div {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.controols,
+.score{
+    width: 100%;
+}
+
+#instructions,
+.board,
+.stats {
+    border-top: 2px solid #00ccff;
+    padding: 15px 0px;
+    margin-top: 25px;
+}
+
+#distance span{
+    float: right;
+    text-align: right;
+}
+
+.score li {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 5px;
+}
+
+.current {
+    text-align: right;
+}
+
+canvas {
+    background: url('/pics/background/F9ppMbS.png')
+}
