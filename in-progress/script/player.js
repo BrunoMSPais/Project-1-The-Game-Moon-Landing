@@ -16,7 +16,7 @@ class Player {
     this.score = 0; //score counter
     
     this.image = new Image();
-    this.image.src = 'pics/apolo-11/apollo-11.png';
+    this.image.src = '../pics/apolo-11/apollo-11.png';
     
     this.target = new Target(this);
   }
@@ -29,14 +29,14 @@ class Player {
     this.y += this.velocityY;
     this.y += this.gravity;
     this.velocityY += this.gravity;
-    console.log('Y: ', this.y);
+    // console.log('Y: ', this.y);
     this.x += this.velocityX;
-    console.log('X: ', this.x);
-    console.log('Y velocity:', this.velocityY);
-    console.log('X velocity:', this.velocityX);
+    // console.log('X: ', this.x);
+    // console.log('Y velocity:', this.velocityY);
+    // console.log('X velocity:', this.velocityX);
     
     //stop moving:
-    if(this.y > 870) {
+    if(this.y >= 870) {
       this.y = 870;
       this.velocityY = 0; // the player stops at the edge of the canvas but the console still keeps going on regestring ocorrences ?????
       this.game.endGame(); // breaks the code :P (solution for the line above)
@@ -48,5 +48,4 @@ class Player {
     let altitude = document.getElementById('playerAltitude').innerText = Math.floor(this.height-this.y-this.playerHeight);
     let distance = document.getElementById('distanceToTarget').innerText = Math.sqrt((this.y-this.target.y)**2 + (this.x-this.target.x-115)**2)-50;
   }
-      
-  }
+}

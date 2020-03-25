@@ -1,5 +1,5 @@
 class Target {
-    constructor(game, image, x, y, width, height) {
+    constructor(game) {
         this.game = game;
         this.context = game.context;
         this.canvas = document.querySelector('canvas');
@@ -7,8 +7,8 @@ class Target {
         this.image = new Image();
         this.image.src = "pics/target/landing-target.png";
 
-        this.x = 825;
-        this.y = 825;
+        this.x = 813;
+        this.y = 780;
         this.width = 230;
         this.height = 80;
     }
