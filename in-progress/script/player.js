@@ -40,13 +40,13 @@ class Player {
       this.velocityY = 0; // the player stops at the edge of the canvas but the console still keeps going on regestring ocorrences ?????
       // this.game.endGame(); // breaks the code :P (solution for the line above)
       this.gravity = 0;
-      frameRate(0)
+      this.context.end = true;
     }
     
     // shows player speed and position in game
     let vX = document.getElementById('xSpeed').innerText = Math.abs(this.velocityX);
     let vY = document.getElementById('ySpeed').innerText = Math.round(Math.abs(this.velocityY)*10, 2);
     let altitude = document.getElementById('playerAltitude').innerText = Math.floor(this.height-this.y-this.playerHeight);
-    let distance = document.getElementById('distanceToTarget').innerText = Math.sqrt((this.y-this.target.y)**2 + (this.x-this.target.x-115)**2)-50;
+    let distance = document.getElementById('distanceToTarget').innerText = Math.floor(Math.sqrt((this.y-this.target.y)**2 + (this.x-this.target.x-115)**2)-50);
   }
 }
