@@ -13,7 +13,6 @@ class Player {
     
     this.gravity = 0.02; //gravity acceleration
     
-    this.score = 0; //score counter
     
     this.image = new Image();
     this.image.src = '../pics/apolo-11/apollo-11.png';
@@ -29,17 +28,19 @@ class Player {
     this.y += this.velocityY;
     this.y += this.gravity;
     this.velocityY += this.gravity;
-    // console.log('Y: ', this.y);
+    console.log('Y: ', this.y);
     this.x += this.velocityX;
-    // console.log('X: ', this.x);
-    // console.log('Y velocity:', this.velocityY);
-    // console.log('X velocity:', this.velocityX);
+    console.log('X: ', this.x);
+    console.log('Y velocity:', this.velocityY);
+    console.log('X velocity:', this.velocityX);
     
     //stop moving:
     if(this.y >= 870) {
       this.y = 870;
       this.velocityY = 0; // the player stops at the edge of the canvas but the console still keeps going on regestring ocorrences ?????
-      this.game.endGame(); // breaks the code :P (solution for the line above)
+      // this.game.endGame(); // breaks the code :P (solution for the line above)
+      this.gravity = 0;
+      frameRate(0)
     }
     
     // shows player speed and position in game
