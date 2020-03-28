@@ -8,7 +8,7 @@ class Target {
         this.image.src = "pics/target/landing-target.png";
 
         this.x = 813;
-        this.y = 780;
+        this.y = 779;
         this.width = 230;
         this.height = 80;
     }

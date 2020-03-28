@@ -13,17 +13,47 @@ body {
 }
 h1,
 h2,
-h3 {
+h3,
+h4 {
     text-align: center;
 }
 
 i {
     font-size: 35px;
+    margin: 0;
+    padding: 0;
+}
+/* 
+.sounds {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
 }
 
-input {
-    width: 25px;
-    height: 25px;
+.sounds label {
+    width: 75%;
+} */
+
+#options li {
+    display: flex;
+    justify-content: space-around;
+}
+
+#option span {
+    width: 850px;
+}
+
+.sound {
+    color:#000;
+    background-color: #00ccff;
+    width: 95px;
+    height: 35px;
+    padding: 5px;
+    border-radius: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 ul,
@@ -34,7 +64,7 @@ ol {
 
 li {
     margin-left: -40px;
-    margin-top: 15px;
+    margin-top: 25px;
 }
 
 form, .stats {
@@ -94,7 +124,7 @@ header {
 
 #instructions,
 .board,
-.stats {
+.stats, footer {
     border-top: 2px solid #00ccff;
     padding: 15px 0px;
     margin-top: 25px;
@@ -117,4 +147,25 @@ header {
 
 canvas {
     background: url('../pics/background/F9ppMbS.png')
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: stretch;
+}
+
+footer h4 {
+    font-size: 20px;
+    text-transform: uppercase;
+}
+footer p {
+    font-size: 12px;
+    line-height: 18px;
+    margin-left: 25px;
+}
+
+a {
+    text-decoration: none;
 }

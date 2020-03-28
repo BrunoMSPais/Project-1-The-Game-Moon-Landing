@@ -21,18 +21,12 @@
                 <h2>OPTIONS</h2>
                 <ul>
                     <li>
-                        <form>
-                            <label for="sound-fx">Sound efects</label>
-                            <input type="checkbox" name="sound-fx" id="sound-fx" checked>
-                        </form>
+                        <span>Sound efects</span> <a href="#" class="sound" id="snd-fx">mute</a>
                     </li>
                     <li>
-                        <form>
-                            <label for="sound-track">Music</label>
-                            <input type="checkbox" name="sound-track" id="sound-track" checked>
-                            <audio src="shine.mp3"></audio>
-                        </form>
+                        <span>Music</span> <a href="#" class="sound" id="music">mute</a>
                     </li>
+                    <a href="#" target="_blank" rel="noopener noreferrer"></a>
                 </ul>
             </div>
 
@@ -46,6 +40,19 @@
                     <li>Enter - Game Start</li>
                 </ul>
             </div>
+
+            <footer>
+                <h4>Credits:</h4>
+
+                <h5>Author:</h5>
+                <p>Bruno Pais</p>
+
+                <h5>Co-authors:</h5>
+                <p>Lissy Gundersen / Paula Brinkhege</p>
+
+                <h5>Scope:</h5>
+                <p>Ironhack Web-dev part-time bootcamp, module 1 (HTML5, CSS and JavaScript), unther the Teacher supervision of Guilherm Carmona and Teacher Assistents, Paula Brinkhege and Lissy Gundersen.</p>
+            </footer>
         </div>
 
         <div class="game-area">
@@ -95,7 +102,7 @@
             </div>
         </div>
 
-        <div class="score">
+        <!-- <div class="score">
             <h2>SCORE BOARD</h2>
 
             <div id="high-scores">
@@ -141,7 +148,7 @@
                     <label for="player-lives">Lives:</label>
                     <input type="radio">
                     <input type="radio">
-                    <input type="radio"> -->
+                    <input type="radio">
                 </form>
 
                 <h3 class="board">
@@ -155,12 +162,15 @@
                 <!-- BONUS -->
                 <!-- <li>Best Time<span>0:00.00</span></li> -->
             </div>
-        </div>
+        </div> -->
     </div>
 
     <script src="script/player.js"></script>
+    <script src="script/circles.js"></script>
+    <script src="script/square.js"></script>
+    <script src="script/triangle.js"></script>
     <script src="script/gameover.js"></script>
-    <script src="script/colision.js"></script>
+    <script src="script/sounds.js"></script>
     <script src="script/target.js"></script>
     <script src="script/landingarea.js"></script>
     <script src="script/controls.js"></script>

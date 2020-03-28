@@ -6,9 +6,7 @@ class Game {
         this.height = canvas.height;
         this.landingarea = new Landingarea(this);
         this.target = new Target(this);
-        // this.colision = new Colision(this);
         this.gameover = new Gameover(this);
-        // this.sound;
         this.player = new Player(this);
         this.controls = new Controls(this);
         this.controls.setControls();
@@ -40,19 +38,26 @@ class Game {
         this.draw();
         this.update(timestamp);
     }
-    //Collision Logic 
+    // Collision Logic 
     checkCollision(player, object) {
         if (object) {
-            return (
+            if(
                 player.x < object.x + object.width &&
                 player.x + player.playerWidth > object.x &&
-                // player.y < object.y + object.height &&
-                player.y /* + player.playerHeight */ > object.y &&
+                player.y-50 < object.y + object.height &&
+                player.y-50 + player.playerHeight > object.y &&
                 player.velocityX == 0 &&
                 player.velocityY <= 1.5
-            );
+            ) {
+                return true;
+            }
+
+            // if(this.landingarea){
+            //     return true;
+            // }
         }
     }
+
     //Clear
     clearAll() {
         this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
@@ -65,6 +70,3 @@ class Game {
         }
     }
 }
-//LANDING CONDITIONS (inside target area / Xspeed = 0 / Yspeed <= 1.5)
-//CRASH CONDITIONS (hit the surface sideways / it the suface with Xspeed > 0 and Yspeed > 1.5 / it the surface outside the landing target area)
-//GAME LOSS CONDITIONS
